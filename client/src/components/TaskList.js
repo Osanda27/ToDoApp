@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // edited
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogout = () => { // add newly for logout
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
+
+
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -32,8 +41,10 @@ const TaskList = () => {
     }
   };
 
+  //add logout btn newly
   return (
     <div>
+      <button onClick={handleLogout}>Logout</button> 
       <h3>Your Tasks</h3>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {tasks.length === 0 ? (
