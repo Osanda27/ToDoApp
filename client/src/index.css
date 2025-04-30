@@ -1,47 +1,77 @@
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f8fafc; /* soft off-white */
+  color: #1e293b; /* slate-800 */
 }
+
+/* Container */
 div {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-input, textarea, button {
+
+/* Inputs, Textareas, Buttons */
+input,
+textarea,
+button {
   display: block;
-  margin: 10px 0;
-  padding: 8px;
+  margin: 12px 0;
+  padding: 10px 14px;
   width: 100%;
+  font-size: 1rem;
   box-sizing: border-box;
+  border: 1px solid #cbd5e1; /* slate-300 */
+  border-radius: 6px;
 }
-button- **button** {
-  background-color: #007bff;
-  color: white;
+
+/* Button Styling */
+button {
+  background-color: #2563eb; /* blue-600 */
+  color: #ffffff;
+  font-weight: 600;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
+
 button:hover {
-  background-color: #0056b3;
+  background-color: #1d4ed8; /* blue-700 */
+  transform: scale(1.02);
 }
+
+/* Task List Styling */
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
+
 li {
-  background: white;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ddd;
+  background: #f1f5f9; /* slate-100 */
+  padding: 12px 16px;
+  margin: 8px 0;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Link Styling */
 a {
-  color: #007bff;
+  color: #3b82f6; /* blue-500 */
   text-decoration: none;
+  font-weight: 500;
 }
+
 a:hover {
   text-decoration: underline;
+  color: #1d4ed8; /* blue-700 */
 }
