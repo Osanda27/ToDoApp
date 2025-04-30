@@ -3,47 +3,68 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8fafc; /* soft off-white */
+  background: linear-gradient(135deg, #e0f2fe, #f0e9ff); /* blue-lavender gradient */
   color: #1e293b; /* slate-800 */
+  min-height: 100vh;
+  transition: background 0.3s ease;
 }
 
 /* Container */
 div {
   max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+div:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Inputs, Textareas, Buttons */
 input,
-textarea,
-button {
+textarea {
   display: block;
   margin: 12px 0;
   padding: 10px 14px;
   width: 100%;
   font-size: 1rem;
   box-sizing: border-box;
-  border: 1px solid #cbd5e1; /* slate-300 */
+  border: 1px solid #cbd5e1;
   border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
 /* Button Styling */
 button {
-  background-color: #2563eb; /* blue-600 */
+  background-color: #6366f1; /* indigo-500 */
   color: #ffffff;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #1d4ed8; /* blue-700 */
-  transform: scale(1.02);
+  background-color: #4f46e5; /* indigo-600 */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 /* Task List Styling */
@@ -54,24 +75,31 @@ ul {
 }
 
 li {
-  background: #f1f5f9; /* slate-100 */
+  background: #f1f5f9;
   padding: 12px 16px;
-  margin: 8px 0;
-  border: 1px solid #e2e8f0; /* slate-200 */
+  margin: 10px 0;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(4px);
+  background-color: #e2e8f0;
 }
 
 /* Link Styling */
 a {
-  color: #3b82f6; /* blue-500 */
+  color: #6366f1; /* indigo-500 */
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #1d4ed8; /* blue-700 */
+  color: #4338ca; /* indigo-700 */
 }
